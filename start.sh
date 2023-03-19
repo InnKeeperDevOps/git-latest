@@ -12,7 +12,7 @@ chmod 0600 ~/.ssh/id_rsa
 
 
 if [[ -z "${GIT_BRANCH}" ]]; then
-    git ls-remote $GIT_REPO $GIT_BRANCH
+    git ls-remote $GIT_REPO $GIT_BRANCH |  awk '{ print $1}'
 else
-    git ls-remote $GIT_REPO head
+    git ls-remote $GIT_REPO head |  awk '{ print $1}'
 fi
