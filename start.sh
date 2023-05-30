@@ -6,6 +6,8 @@ if [[ -f "$FILE" ]]; then
   ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
   cp /ssh/key ~/.ssh/id_rsa
   chmod 0600 ~/.ssh/id_rsa
+else
+  echo "ssh key not found, is this a public repo?"
 fi
 
 if [[ -z "${GIT_BRANCH}" ]]; then
