@@ -10,7 +10,8 @@ else
   echo "ssh key not found, is this a public repo?"
 fi
 
-echo "checking ${GIT_REPO}"
+echo "repo:     ${GIT_REPO}"
+echo "branch:   ${GIT_BRANCH}"
 
 if [[ -z "${GIT_BRANCH}" ]]; then
     git ls-remote $GIT_REPO $GIT_BRANCH |  awk '{ print $1}'
