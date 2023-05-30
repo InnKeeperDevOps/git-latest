@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILE=/ssh/key
-if [ -f "$FILE" ]; then
+if [[ -f "$FILE" ]]; then
   mkdir ~/.ssh/
   ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
   cp /ssh/key ~/.ssh/id_rsa
