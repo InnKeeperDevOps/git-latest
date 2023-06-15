@@ -14,7 +14,7 @@ echo "repo:     ${GIT_REPO}"
 echo "branch:   ${GIT_BRANCH}"
 
 if [[ -z "${GIT_BRANCH}" ]]; then
-    git ls-remote $GIT_REPO head |  awk '{ print $1}'
+    git ls-remote $GIT_REPO HEAD |  awk '{ print $1}'
 else
     git ls-remote $GIT_REPO $GIT_BRANCH |  awk '{ print $1}'
 fi
